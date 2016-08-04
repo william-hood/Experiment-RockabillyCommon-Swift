@@ -98,6 +98,7 @@ public class HtmlLogSystem {
     // Deliberate -- logToHtml with no OutputIdentifier specified means go to all of them.
     public func logToHtml(newString: String, requestedLevel: LoggingLevel = LoggingLevel.Standard) throws {
         if outputs.count < 1 {
+            // Need to make it ignore the warning for the line below
             try addDefaultOutput()
         }
         for thisOutput: HtmlLogSystemOutput in outputs.values {
