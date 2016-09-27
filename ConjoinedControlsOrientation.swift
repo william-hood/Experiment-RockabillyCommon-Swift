@@ -20,8 +20,12 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  * OTHER DEALINGS IN THE SOFTWARE.
  ******************************************************************************/
-public enum HorizontalJustification: String {
-    case LEFT = "left"
-    case CENTER = "center"
-    case RIGHT = "right"
+
+import Foundation
+
+public enum ConjoinedControlsOrientation {
+    case AlphaAbove
+    case AlphaLeft
+    case AlphaRight
+    case AlphaBelow
 }

@@ -185,7 +185,7 @@ public class HtmlLogSystem {
                     result.append(thisString)
                 }
             } else {
-                result.append(thisString.justify(columns: 120).replacingOccurrences(of: Symbols.NewLine, with: "<br>" + Symbols.NewLine))
+                result.append(thisString.justify(columns: 150).replacingOccurrences(of: Symbols.NewLine, with: "<br>" + Symbols.NewLine))
             }
         }
         result.append(HtmlLogSystem.HTML__TABLE_END_DATA_CELL)
@@ -216,7 +216,7 @@ public class HtmlLogSystem {
         }
          */
 
-        try message(icon: icon, message: String(loggedException).replacingOccurrences(of: "\t", with: HtmlLogSystem.HTML__SPACE + HtmlLogSystem.HTML__SPACE + HtmlLogSystem.HTML__SPACE + HtmlLogSystem.HTML__SPACE + HtmlLogSystem.HTML__SPACE).replacingOccurrences(of: Symbols.NewLine, with: HtmlLogSystem.HTML__LINE_BREAK), requestedLevel: requestedLevel)
+        try message(icon: icon, message: "<small>" + String(loggedException).replacingOccurrences(of: "\t", with: HtmlLogSystem.HTML__SPACE + HtmlLogSystem.HTML__SPACE + HtmlLogSystem.HTML__SPACE + HtmlLogSystem.HTML__SPACE + HtmlLogSystem.HTML__SPACE).replacingOccurrences(of: Symbols.NewLine, with: HtmlLogSystem.HTML__LINE_BREAK) + "</small>", requestedLevel: requestedLevel)
         //flush()
     }
 }
